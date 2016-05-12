@@ -28,6 +28,24 @@
             </div>
           </div>
         </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="professions">Professions</label>
+          <div class="controls">
+            <input class="form-control" type="text" name="professions" ng-model="user.professions" id="professions" ng-list required />
+            <div ng-messages="userForm.professions.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">At least one profession is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="interests">Interest</label>
+          <div class="controls">
+            <input class="form-control" type="text" name="interests" ng-model="user.interests" id="interests" ng-list required />
+            <div ng-messages="userForm.interests.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">At least one interest is required.</p>
+            </div>
+          </div>
+        </div>
         <div class="form-group">
           <input type="submit" value="Update" class="btn btn-default">
         </div>

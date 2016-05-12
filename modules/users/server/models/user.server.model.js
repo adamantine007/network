@@ -97,7 +97,22 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
-  }
+  },
+
+  professions: [{
+    type: Schema.ObjectId,
+    ref: 'Profession'
+  }],
+  interests: [{
+    type: Schema.ObjectId,
+    ref: 'Interest'
+  }]
+  // professions: {
+  //   type: String
+  // },
+  // interests: {
+  //   type: String
+  // }
 });
 
 /**
