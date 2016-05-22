@@ -106,13 +106,15 @@ var UserSchema = new Schema({
   interests: [{
     type: Schema.ObjectId,
     ref: 'Interest'
+  }],
+  address: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  locations: [{
+    type: Number
   }]
-  // professions: {
-  //   type: String
-  // },
-  // interests: {
-  //   type: String
-  // }
 });
 
 /**
